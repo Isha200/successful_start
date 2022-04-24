@@ -1,4 +1,8 @@
 import React from 'react'
+import About from './About';
+import Lesson from './Lesson';
+import Network from './Network';
+
 
 const Home = () => {
     return (
@@ -26,6 +30,10 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <Home/>
+            <About/>
+            <Lesson/>
+            <Network/>
         </div>
     )
 }

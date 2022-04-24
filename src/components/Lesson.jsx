@@ -3,7 +3,7 @@ import React from 'react'
 const Lesson = () => {
     return (
         <div>
-            <section id="service">
+            <section id="lesson">
                 <div className="container my-5 py-5">
                     <div className="row ">
                         <div className="col-12">
