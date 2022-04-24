@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Services = () => {
+const Lesson = () => {
     return (
         <div>
             <section id="service">
@@ -53,4 +53,4 @@ const Services = () => {
     )
 }
 
-export default Services
+export default Lesson

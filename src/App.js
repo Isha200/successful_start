@@ -3,8 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
-import Services from './components/Services';
+import Lesson from './components/Lesson';
 import Network from './components/Network';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
     <Navbar/>
     <Home/>
     <About/>
-    <Services/>
+    <Lesson/>
     <Network/>
+    <Footer/>
   
     </>
   );
