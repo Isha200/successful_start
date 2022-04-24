@@ -6,6 +6,7 @@ import Lesson from './components/Lesson';
 import Network from './components/Network';
 import Footer from './components/Footer';
 import { Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
         <Route path="/about" element={<About/>} />
         <Route path="/lesson" element={<Lesson/>} />
         <Route path="/network" element={<Network/>} />
+        <Route path="/login" element={<Login/>} />
+        {/* <Route path="/register" element={<Register/>} /> */}
       </Routes>
       <Footer />
 

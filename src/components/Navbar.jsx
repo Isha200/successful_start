@@ -26,11 +26,11 @@ const Navbar = () => {
                             </li>
                         </ul>
 
-                        <button className="btn btn-outline-primary ms-auto px-4 rounded-pill">
-                            <i className='fa fa-sign-in me-2'></i>Login</button>
+                        <NavLink to="/login" className="btn btn-outline-primary ms-auto px-4 rounded-pill">
+                            <i className='fa fa-sign-in me-2'></i>Login</NavLink>
 
-                        <button className="btn btn-outline-primary ms-2 px-4 rounded-pill">
-                            <i className='fa fa-user-plus me-2'></i>Register</button>
+                        <NavLink to="/register" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                            <i className='fa fa-user-plus me-2'></i>Register</NavLink>
 
                     </div>
                 </div>
