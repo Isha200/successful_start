@@ -5,7 +5,7 @@ const Navbar = () => {
     <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
                 <div class="container">
-                    <a class="navbar-brand fw-bolder fs-4 mx-auto" href="#">Successful Start</a>
+                    <a class="navbar-brand fw-bolder fs-4 " href="#">Successful Start</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -14,15 +14,15 @@ const Navbar = () => {
                             <li class="nav-item">
                                 <a class="nav-link active me-2" aria-current="page" href="#">Home</a>
                             </li>
-                            {/* <li class="nav-item">
-                                <a class="nav-link" href="#">Network</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About us</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Lesson space</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li> */}
+                                <a class="nav-link" href="#">Network</a>
+                            </li>
                         </ul>
 
                         <button className="btn btn-outline-primary ms-auto px-4 rounded-pill">
