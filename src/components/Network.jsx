@@ -1,18 +1,18 @@
 import React from 'react'
 
-const About = () => {
+const Network = () => {
     return (
         <div>
             <section id="about">
                 <div className="container my-5 py-5">
                     <div className="row">
                         <div className="col-md-6">
-                            <img src="/assests/about1.jpg" alt="About"
+                            <img src="/assests/investor1.jpg" alt="About"
                                 className='w-75 mt-5' />
                         </div>
                         <div className="col-md-6">
-                            <h3 className="fs-5 mb-0">About Us</h3>
-                            <h1 className="display-6 mb-2">Who are we?</h1>
+                            <h3 className="fs-5 mb-0">Network</h3>
+                            <h1 className="display-6 mb-2">Investors</h1>
                             <hr className='w-50' />
                             <p className="lead mb-4">
                                 Lorem ipsum dolor sit amet consectetur, 
@@ -33,4 +33,4 @@ const About = () => {
     )
 }
 
-export default About 
+export default Network
