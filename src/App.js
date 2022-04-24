@@ -18,10 +18,6 @@ function App() {
         <Route path="/lesson" element={<Lesson/>} />
         <Route path="/network" element={<Network/>} />
       </Routes>
-      {/* <Home/>
-    <About/>
-    <Lesson/>
-    <Network/> */}
       <Footer />
 
     </>

@@ -1,7 +1,8 @@
 import React from 'react'
-import About from './About';
-import Lesson from './Lesson';
-import Network from './Network';
+import About from './About'
+import Lesson from './Lesson'
+import Network from './Network'
+
 
 
 const Home = () => {
@@ -30,12 +31,11 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <Home/>
-            <About/>
-            <Lesson/>
-            <Network/>
+           <About/>
+           <Lesson/>
+           <Network/>
         </div>
-    )
+    );
 }
 
 export default Home
