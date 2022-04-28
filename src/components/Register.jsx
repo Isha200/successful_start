@@ -1,6 +1,40 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-function Register() {
+import { NavLink, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import axios from 'axios';
+
+
+
+const Register = () => {
+
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+        password: ""
+    });
+
+    const [error, setError] = useState();
+    const navigate = useNavigate();
+
+    const handleChange = ({ currentTarget: input }) => {
+        setData({ ...data, [input.name]: input.value })
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const url = "http://localhost3001/api/users";
+            const { data: res } = await axios.post(url, data);
+            navigate("/profile")
+            console.log(res.message);
+        } catch (error) {
+            if (error.response && error.response.status >= 400 && error.response <= 500) {
+                setError(error.response.data.message)
+            }
+        }
+    }
+
+
     return (
         <div>
             <div className="container shadow my-5">
@@ -18,20 +52,54 @@ function Register() {
                     </div>
                     <div className="col-md-6 p-5">
                         <h1 className="display-6 fw-bolder mb-5">Register</h1>
-                        <form>
+                        <form onSubmit={handleSubmit} >
                             <div class="mb-3">
                                 <label for="exampleInputName1" class="form-label">Full Name</label>
-                                <input type="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" />
-                                {/* <div id="nameHelp" class="form-text">We'll never share your email with anyone else.</div> */}
+                                <input
+                                    type="text"
+                                    placeholder='Full Name'
+                                    name='name'
+                                    value={data.name}
+                                    required
+                                    onChange={handleChange}
+                                    class="form-control"
+                                    id="exampleInputName1"
+                                    aria-describedby="nameHelp"
+                                />
+
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                <input
+                                    type="email"
+                                    placeholder='Email'
+                                    name='email'
+                                    value={data.email}
+                                    required
+                                    onChange={handleChange}
+                                    class="form-control"
+                                    id="exampleInputEmail1"
+                                    aria-describedby="emailHelp"
+                                />
+                                <div
+                                    id="emailHelp"
+                                    class="form-text">
+                                    We'll never share your email with anyone else.
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" />
+                                <input
+                                    type="password"
+                                    placeholder='Password'
+                                    name='password'
+                                    value={data.password}
+                                    required
+                                    onChange={handleChange}
+                                    class="form-control"
+                                    id="exampleInputPassword1"
+
+                                />
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1" />
@@ -45,5 +113,6 @@ function Register() {
         </div>
     )
 }
+
 
 export default Register
