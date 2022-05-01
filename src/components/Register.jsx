@@ -1,39 +1,59 @@
 import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
-import axios from 'axios';
-
-
+import { useNavigate } from 'react-router'
 
 const Register = () => {
 
-    const [data, setData] = useState({
-        name: "",
+    const navigate = useNavigate();
+
+    const [user, setUser] = useState({
+        username: "",
         email: "",
         password: ""
     });
 
-    const [error, setError] = useState();
-    const navigate = useNavigate();
+    //Handle inputs
+    const handleInput = (event) => {
+        let name = event.target.name;
+        let value = event.target.value;
 
-    const handleChange = ({ currentTarget: input }) => {
-        setData({ ...data, [input.name]: input.value })
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const url = "http://localhost:3000/register";
-            const { data: res } = await axios.post(url, data);
-            navigate("/profile")
-            console.log(res.message);
-        } catch (error) {
-            if (error.response && error.response.status >= 400 && error.response <= 500) {
-                setError(error.response.data.message)
-            }
-        }
+        setUser({ ...user, [name]: value });
     }
 
+    //Handle Submit 
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        //object Destructing
+        //store object data into variable
+        const { username, email, password } = user;
+
+        try {
+            //It is Submitted on port 3000 by default 
+            // Which is frontend 
+            //Proxy needed for backend
+            const res = await fetch('/register', {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify({
+                    username, email, password
+                })
+            })
+
+            if (res.status === 400 || !res) {
+                window.alert("Already Used Details")
+            }
+            else {
+                window.alert("Registration completed Successfully");
+                navigate.push('/login')
+            }
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
 
     return (
         <div>
@@ -52,19 +72,16 @@ const Register = () => {
                     </div>
                     <div className="col-md-6 p-5">
                         <h1 className="display-6 fw-bolder mb-5">Register</h1>
-                        <form onSubmit={handleSubmit} >
+                        <form onSubmit={handleSubmit} method="POST">
                             <div class="mb-3">
                                 <label for="exampleInputName1" class="form-label">Full Name</label>
                                 <input
                                     type="text"
-                                    placeholder='Full Name'
-                                    name='name'
-                                    value={data.name}
-                                    required
-                                    onChange={handleChange}
                                     class="form-control"
                                     id="exampleInputName1"
-                                    aria-describedby="nameHelp"
+                                    name="username"
+                                    value={user.username}
+                                    onChange={handleInput}
                                 />
 
                             </div>
@@ -72,14 +89,11 @@ const Register = () => {
                                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                                 <input
                                     type="email"
-                                    placeholder='Email'
-                                    name='email'
-                                    value={data.email}
-                                    required
-                                    onChange={handleChange}
                                     class="form-control"
                                     id="exampleInputEmail1"
-                                    aria-describedby="emailHelp"
+                                    name="email"
+                                    value={user.email}
+                                    onChange={handleInput}
                                 />
                                 <div
                                     id="emailHelp"
@@ -91,14 +105,11 @@ const Register = () => {
                                 <label for="exampleInputPassword1" class="form-label">Password</label>
                                 <input
                                     type="password"
-                                    placeholder='Password'
-                                    name='password'
-                                    value={data.password}
-                                    required
-                                    onChange={handleChange}
                                     class="form-control"
                                     id="exampleInputPassword1"
-
+                                    name="password"
+                                    value={user.password}
+                                    onChange={handleInput}
                                 />
                             </div>
                             <div class="mb-3 form-check">
