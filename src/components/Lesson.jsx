@@ -7,7 +7,7 @@ const Lesson = () => {
         <div className="row ">
             <div className="col-12">
                 <br></br>
-                <hi className="display-6  mb-4">Topics Checklist</hi>
+                <h1 className="display-6  mb-4">Topics Checklist</h1>
                 <hr className='w-25' />
             </div>
             <br></br>

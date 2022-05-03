@@ -15,16 +15,16 @@ const About = () => {
                             <h1 className="display-6 mb-2">Who are we?</h1>
                             <hr className='w-50' />
                             <p className="lead mb-4">
-                                Lorem ipsum dolor sit amet consectetur, 
-                                adipisicing elit. Obcaecati ipsum molestias
-                                aliquid quas fuga alias fugiat tempore,
-                                placeat nostrum odit eos exercitationem
-                                consectetur! Voluptatem aliquam expedita 
-                                porro autem doloribus voluptates exercitationem 
-                                nam quas, veniam sunt, ea qui debitis quisquam 
-                                blanditiis in ex, cum recusandae unde deleniti 
-                                consequuntur. Optio, nemo laudantium.</p>
-                            {/* <button className="btn btn-outline-primary rounded-pill py-2">Get Started</button> */}
+                                Small businesses, whether they are online or not,
+                                experience more hardship breaking into the market
+                                in comparison to a larger scale business. Larger
+                                scale businesses usually have a wider scope, a
+                                bigger budget or a range of guidance and support
+                                available for them.</p>
+                            <p className="lead mb-4">
+                                Made for enthusiastic people who are passionate about owning
+                                and running their own business but have no experience
+                                or knowledge or the correct guidance to start from scratch</p>
                         </div>
                     </div>
                 </div>

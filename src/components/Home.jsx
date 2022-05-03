@@ -12,18 +12,17 @@ const Home = () => {
                             <h1 className="display-4 fw-bolder mb-4 text-center text-white">
                                 Learning + Networking</h1>
                             <p className="lead text-center mb-5 text-white">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Nulla quod neque incidunt totam sint, molestiae expedita quas voluptate dolorum,
-                                possimus vel nihil amet illum deleniti soluta nobis. Nostrum aliquam tenetur eum
-                                expedita ratione voluptatibus, cumque vitae pariatur earum nesciunt, incidunt quos
-                                ipsum culpa, consectetur itaque est illum non animi dignissimos.
+                                The one place where you can learn and network too!
                             </p>
-
-                            {/* <div className="buttons d-flex rounded-pill justify-content-center">
-                                <button className="btn btn-light me-4 rounded-pill px-4 py-2">Login</button>
-                                <button className="btn btn-light me-4 rounded-pill px-4 py-2">Register</button>
-                            </div> */}
-
+                            <p className="lead text-center mb-5 text-white">
+                                Start your journey to starting your own business here
+                            </p>
+                            <p className="lead text-center mb-5 text-white">
+                                Learn in the method you learn the best!
+                            </p>
+                            <p className="lead text-center mb-5 text-white">
+                                Find the perfect investors for your business
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -82,36 +81,29 @@ const Home = () => {
             </div>
             {/* NETWORK SPACE */}
             <div>
-            <section id="network">
-                <div className="container my-5 py-5">
-                    <div className="row">
-                        <div className="col-md-6">
-                            <img src="/assests/investor1.jpg" alt="About"
-                                className='w-75 mt-5' />
-                        </div>
-                        <div className="col-md-6">
-                            <h3 className="fs-5 mb-0">Network</h3>
-                            <h1 className="display-6 mb-2">Investors</h1>
-                            <hr className='w-50' />
-                            <p className="lead mb-4">
-                                Lorem ipsum dolor sit amet consectetur, 
-                                adipisicing elit. Obcaecati ipsum molestias
-                                aliquid quas fuga alias fugiat tempore,
-                                placeat nostrum odit eos exercitationem
-                                consectetur! Voluptatem aliquam expedita 
-                                porro autem doloribus voluptates exercitationem 
-                                nam quas, veniam sunt, ea qui debitis quisquam 
-                                blanditiis in ex, cum recusandae unde deleniti 
-                                consequuntur. Optio, nemo laudantium.</p>
-                            {/* <button className="btn btn-outline-primary rounded-pill py-2">Get Started</button> */}
+                <section id="network">
+                    <div className="container my-5 py-5">
+                        <div className="row">
+                            <div className="col-md-6">
+                                <img src="/assests/investor1.jpg" alt="About"
+                                    className='w-75 mt-5' />
+                            </div>
+                            <div className="col-md-6">
+                                <h3 className="fs-5 mb-0">Network</h3>
+                                <h1 className="display-6 mb-2">Investors</h1>
+                                <hr className='w-50' />
+                                <p className="lead mb-4">
+                                    Investors can find the new start-up here</p>
+                                <p className="lead mb-4">
+                                    View profiles of current students and view their ideas and connect with them!</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
-        </div>
-        
-        
+
+
     );
 }
 

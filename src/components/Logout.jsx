@@ -32,7 +32,7 @@ function Logout() {
     useEffect(() => {
         logout();
 
-    }, [])
+    },)
 
 
     return (
