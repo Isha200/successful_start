@@ -1,56 +1,127 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+
 
 const Lesson = () => {
     return (
-        <div>
-            <section id="lesson">
-                <div className="container my-5 py-5">
-                    <div className="row ">
-                        <div className="col-12">
-                            <h3 className="fs-5  mb-0"> Lesson Space </h3>
-                            <hi className="display-6  mb-4">Learn with your chosen method</hi>
-                            <hr className='w-25' />
-                        </div>
-                    </div>
-                    <div className="row mt-5">
-                        <div className="col-md-4">
-                            <div class="card p-3">
-                                <div class="card-body text-center">
-                                    <i class="fa fa-check-square-o fa-4x mb-4 text-primary" aria-hidden="true"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Topics</h5>
-                                    <p class="card-text lead">
-                                        All the topics you need to learn to start you own business. From <b>business plan</b> to <b>marketing</b> to <b>taxes.</b></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div class="card p-3">
-                                <div class="card-body text-center">
-                                <i class="fa fa-file fa-4x mb-4 text-primary" aria-hidden="true"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Methods</h5>
-                                    <p class="card-text lead">
-                                        Learn the content in the method you prefer!
-                                        <br></br> 
-                                        <b> Videos, audios or notes.</b></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div class="card p-3">
-                                <div class="card-body text-center">
-                                    <i class="fa fa-comments-o fa-4x mb-4 text-primary" aria-hidden="true"></i>
-                                    <h5 class="card-title mb-3 fs-4 fw-bold">Feedback</h5>
-                                    <p class="card-text lead">
-                                       Get presonalised feedback from the professionals. Feedback on your
-                                       <b> business plan</b> or <b>questions about the content.</b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <div className="row ">
+            <div className="col-12">
+                <br></br>
+                <hi className="display-6  mb-4">Topics Checklist</hi>
+                <hr className='w-25' />
+            </div>
+            <br></br>
+            <ul className="list-group list-group-horizontal">
+                <li className="list-group-item">
+                    <input className="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                    <b>Business Plan</b>
+                </li>
+                <li className="list-group-item">
+                    Learn how to create the perfect business plan
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/video" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-video-o me-2'></i> Video</NavLink>
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/audio" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-audio-o me-2'></i> Audio</NavLink>
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/notes" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-text-o me-2'></i> Notes</NavLink>
+                </li>
+            </ul>
+            <br></br>
+            <ul className="list-group list-group-horizontal-sm">
+                <li className="list-group-item">
+                    <input className="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                    <b>Finance</b>
+                </li>
+                <li className="list-group-item">
+                    Delaing with all the money that goes in and out of the business
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/video" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-video-o me-2'></i> Video</NavLink>
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/audio" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-audio-o me-2'></i> Audio</NavLink>
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/notes" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-text-o me-2'></i> Notes</NavLink>
+                </li>
+            </ul>
+            <br></br>
+            <ul className="list-group list-group-horizontal-md">
+                <li className="list-group-item">
+                    <input className="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                    <b>Taxes</b>
+                </li>
+                <li className="list-group-item">
+                    Knowing when to pay taxes and how much
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/video" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-video-o me-2'></i> Video</NavLink>
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/audio" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-audio-o me-2'></i> Audio</NavLink>
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/notes" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-text-o me-2'></i> Notes</NavLink>
+                </li>
+            </ul>
+            <br></br>
+            <ul className="list-group list-group-horizontal-lg">
+                <li className="list-group-item">
+                    <input className="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                    <b>Legal</b>
+                </li>
+                <li className="list-group-item">
+                    From registration of the business to the dealing with employees
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/video" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-video-o me-2'></i> Video</NavLink>
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/audio" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-audio-o me-2'></i> Audio</NavLink>
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/notes" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-text-o me-2'></i> Notes</NavLink>
+                </li>
+            </ul>
+            <br></br>
+            <ul className="list-group list-group-horizontal-xl">
+                <li className="list-group-item">
+                    <input className="form-check-input me-1" type="checkbox" value="" aria-label="..." />
+                    <b>Marketing</b>
+                </li>
+                <li className="list-group-item">
+                    From product development to lauching of the product in the market
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/video" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-video-o me-2'></i> Video</NavLink>
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/audio" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-audio-o me-2'></i> Audio</NavLink>
+                </li>
+                <li className="list-group-item">
+                    <NavLink to="/notes" className="btn btn-outline-primary ms-2 px-4 rounded-pill">
+                        <i className='fa fa-file-text-o me-2'></i> Notes</NavLink>
+                </li>
+            </ul>
         </div>
-    )
+    );
 }
 
 export default Lesson
