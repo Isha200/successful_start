@@ -4,9 +4,6 @@ import plan from "./businessplan.mp4";
 
 function Video() {
 
-  const vidSrc = plan;
-
-
   return (
     
       <section id="video">
@@ -24,7 +21,7 @@ function Video() {
                   width="720"
                   height="420"
                 />
-              </div>
+              </div> 
             </div>
           </div>
           </div>
@@ -35,3 +32,4 @@ function Video() {
 }
 
 export default Video
+
